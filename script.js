@@ -228,15 +228,15 @@ function updatePages() {
     // Update page indicator
     const totalPages = currentStory.pages.length;
     const currentDisplayStart = currentPageIndex + 1;
-    const currentDisplayEnd = Math.min(currentPageIndex + 2, totalPages);
-    pageIndicator.textContent = `${currentDisplayStart}-${currentDisplayEnd} of ${totalPages}`;
+    const currentDisplayEnd = rightPage ? currentPageIndex + 2 : currentPageIndex + 1;
+    pageIndicator.textContent = `${currentDisplayStart}${rightPage ? '-' + currentDisplayEnd : ''} of ${totalPages}`;
     
     // Update button states
     const prevBtn = document.getElementById('prevPage');
     const nextBtn = document.getElementById('nextPage');
     
     prevBtn.disabled = currentPageIndex === 0;
-    nextBtn.disabled = currentPageIndex >= totalPages - 1;
+    nextBtn.disabled = currentPageIndex >= totalPages - 2 && !rightPage;
 }
 
 // Navigate to previous page
@@ -254,6 +254,10 @@ function nextPage() {
     if (currentStory && currentPageIndex < currentStory.pages.length - 1) {
         addPageTurnAnimation();
         currentPageIndex += 2;
+        // Ensure we don't go beyond the last page
+        if (currentPageIndex >= currentStory.pages.length) {
+            currentPageIndex = currentStory.pages.length - 1;
+        }
         setTimeout(updatePages, 300);
     }
 }
