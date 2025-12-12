@@ -153,7 +153,6 @@ function renderLibrary() {
         const bookCard = document.createElement('div');
         bookCard.className = 'book-card';
         bookCard.style.animationDelay = `${index * 0.1}s`;
-        bookCard.onclick = () => openBook(story);
         
         bookCard.innerHTML = `
             <div class="book-thumbnail" style="background: ${story.gradient}">
@@ -165,6 +164,7 @@ function renderLibrary() {
             </div>
         `;
         
+        bookCard.addEventListener('click', () => openBook(story));
         booksGrid.appendChild(bookCard);
     });
 }
@@ -236,7 +236,7 @@ function updatePages() {
     const nextBtn = document.getElementById('nextPage');
     
     prevBtn.disabled = currentPageIndex === 0;
-    nextBtn.disabled = currentPageIndex >= totalPages - 2 && !rightPage;
+    nextBtn.disabled = currentPageIndex >= totalPages - 1;
 }
 
 // Navigate to previous page
