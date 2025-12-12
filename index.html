@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Story Time - Interactive Story Book</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>📚 Story Time</h1>
+            <p class="subtitle">Your Personal Story Collection</p>
+        </header>
+
+        <div id="library" class="library">
+            <div class="books-grid" id="booksGrid"></div>
+        </div>
+
+        <div id="bookReader" class="book-reader hidden">
+            <button class="close-book" id="closeBook">✕</button>
+            <div class="book-container">
+                <div class="book" id="book">
+                    <div class="page page-left" id="pageLeft">
+                        <div class="page-content" id="pageLeftContent"></div>
+                        <div class="page-number" id="pageLeftNumber"></div>
+                    </div>
+                    <div class="page page-right" id="pageRight">
+                        <div class="page-content" id="pageRightContent"></div>
+                        <div class="page-number" id="pageRightNumber"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="controls">
+                <button class="nav-btn" id="prevPage">← Previous</button>
+                <span class="page-indicator" id="pageIndicator"></span>
+                <button class="nav-btn" id="nextPage">Next →</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
