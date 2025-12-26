@@ -1,0 +1,23 @@
+{
+  "name": "story-time",
+  "version": "1.0.0",
+  "description": "Interactive Story Book Website",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18.x"
+  },
+  "keywords": [
+    "stories",
+    "books",
+    "reading"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "express-rate-limit": "^6.11.0"
+  }
+}

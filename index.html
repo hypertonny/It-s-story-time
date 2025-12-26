@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Story Time - Immerse Yourself in Interactive Stories</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <div class="hero-icon">📚</div>
+                <h1 class="hero-title">Welcome to Story Time</h1>
+                <p class="hero-subtitle">Experience stories like never before with our interactive book reader</p>
+                <p class="hero-description">
+                    Dive into magical worlds, turn pages with realistic animations, and lose yourself in beautifully crafted tales. 
+                    Your personal library of adventures awaits.
+                </p>
+                <div class="hero-buttons">
+                    <button class="cta-primary" id="exploreBtn">
+                        <span>🌟 Explore Stories</span>
+                    </button>
+                    <button class="cta-secondary" id="learnMoreBtn">
+                        <span>Learn More</span>
+                    </button>
+                </div>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <div class="stat-number">4</div>
+                    <div class="stat-label">Stories</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">24</div>
+                    <div class="stat-label">Chapters</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">∞</div>
+                    <div class="stat-label">Adventures</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features" id="features">
+            <h2 class="section-title">Why Choose Story Time?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">📖</div>
+                    <h3 class="feature-title">Realistic Page Turning</h3>
+                    <p class="feature-description">Experience the joy of reading with smooth, realistic page-turning animations that bring books to life.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎨</div>
+                    <h3 class="feature-title">Beautiful Design</h3>
+                    <p class="feature-description">Modern glassmorphism UI with stunning gradients and smooth transitions for an immersive experience.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⌨️</div>
+                    <h3 class="feature-title">Keyboard Navigation</h3>
+                    <p class="feature-description">Navigate through stories effortlessly using arrow keys, Page Up/Down, or on-screen controls.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📱</div>
+                    <h3 class="feature-title">Fully Responsive</h3>
+                    <p class="feature-description">Enjoy seamless reading on any device - desktop, tablet, or mobile. Your stories, anywhere.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Story Collection Section -->
+        <section class="library" id="library">
+            <h2 class="section-title">Featured Story Collection</h2>
+            <p class="section-subtitle">Click any story to begin your journey</p>
+            <div class="books-grid" id="booksGrid"></div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>📚 Story Time</h3>
+                    <p>Your gateway to interactive storytelling</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#library">Stories</a>
+                    <a href="#features">Features</a>
+                    <a href="https://github.com/hypertonny/It-s-story-time" target="_blank">GitHub</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>Made with ❤️ for story lovers everywhere</p>
+            </div>
+        </footer>
+
+        <!-- Book Reader Modal -->
+        <div id="bookReader" class="book-reader hidden">
+            <button class="close-book" id="closeBook">✕</button>
+            <div class="book-container">
+                <div class="book" id="book">
+                    <div class="page page-left" id="pageLeft">
+                        <div class="page-content" id="pageLeftContent"></div>
+                        <div class="page-number" id="pageLeftNumber"></div>
+                    </div>
+                    <div class="page page-right" id="pageRight">
+                        <div class="page-content" id="pageRightContent"></div>
+                        <div class="page-number" id="pageRightNumber"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="controls">
+                <button class="nav-btn" id="prevPage">← Previous</button>
+                <span class="page-indicator" id="pageIndicator"></span>
+                <button class="nav-btn" id="nextPage">Next →</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
