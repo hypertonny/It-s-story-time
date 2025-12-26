@@ -14,12 +14,14 @@ const limiter = rateLimit({
 });
 
 // Apply rate limiting to all routes
+// This middleware is applied before any route handlers, so all routes are protected
 app.use(limiter);
 
 // List of allowed files to serve
 const allowedFiles = ['index.html', 'styles.css', 'script.js'];
 
 // Serve specific static files only
+// Note: These routes are rate-limited by the middleware above
 allowedFiles.forEach(file => {
     app.get(`/${file}`, (req, res) => {
         res.sendFile(path.join(__dirname, file));
@@ -27,6 +29,7 @@ allowedFiles.forEach(file => {
 });
 
 // Route to serve index.html as the root
+// Note: This route is also rate-limited by the middleware above
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'index.html'));
 });
