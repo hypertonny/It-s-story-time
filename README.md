@@ -1,6 +1,6 @@
 # 📚 Story Time - Interactive Story Book Website
 
-A beautiful, modern web application for displaying and reading stories in an interactive book format with page-turning animations. Features glassmorphism design, modern color schemes, and seamless Heroku deployment.
+A beautiful, modern web application for displaying and reading stories in an interactive book format with page-turning animations. Features glassmorphism design, modern color schemes, and seamless deployment to Railway or Heroku.
 
 ## ✨ Features
 
@@ -11,13 +11,13 @@ A beautiful, modern web application for displaying and reading stories in an int
 - **Book Thumbnails**: Each story has a unique gradient background with emoji icon
 - **Keyboard Navigation**: Use arrow keys, Page Up/Down, or Escape to navigate
 - **Multiple Stories**: Includes 4 sample stories to get you started
-- **Heroku Ready**: Easy one-click deployment to Heroku
+- **Deploy Anywhere**: Easy one-click deployment to Railway or Heroku
 
 ## 🚀 Getting Started
 
 ### Prerequisites
 
-- Node.js 18.x or higher (for Heroku deployment)
+- Node.js 18.x or higher (for cloud deployment)
 - Git
 
 ### Local Development
@@ -50,6 +50,36 @@ You can also run without Node.js using Python:
 python3 -m http.server 8080
 ```
 
+## 🌐 Deploy to Railway
+
+### One-Click Deploy
+
+[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new/template?template=https%3A%2F%2Fgithub.com%2Fhypertonny%2FIt-s-story-time)
+
+### Manual Deployment
+
+1. Install the [Railway CLI](https://docs.railway.app/develop/cli)
+
+2. Login to Railway:
+   ```bash
+   railway login
+   ```
+
+3. Initialize Railway project:
+   ```bash
+   railway init
+   ```
+
+4. Deploy to Railway:
+   ```bash
+   railway up
+   ```
+
+5. Open your deployed app:
+   ```bash
+   railway open
+   ```
+
 ## 🌐 Deploy to Heroku
 
 ### One-Click Deploy
@@ -78,8 +108,6 @@ python3 -m http.server 8080
 5. Open your deployed app:
    ```bash
    heroku open
-   ```
-   http://localhost:8080
    ```
 
 ## 📖 How to Use
