@@ -277,6 +277,22 @@ function setupEventListeners() {
     document.getElementById('prevPage').addEventListener('click', prevPage);
     document.getElementById('nextPage').addEventListener('click', nextPage);
     
+    // Hero section buttons
+    const exploreBtn = document.getElementById('exploreBtn');
+    const learnMoreBtn = document.getElementById('learnMoreBtn');
+    
+    if (exploreBtn) {
+        exploreBtn.addEventListener('click', () => {
+            document.getElementById('library').scrollIntoView({ behavior: 'smooth' });
+        });
+    }
+    
+    if (learnMoreBtn) {
+        learnMoreBtn.addEventListener('click', () => {
+            document.getElementById('features').scrollIntoView({ behavior: 'smooth' });
+        });
+    }
+    
     // Keyboard navigation
     document.addEventListener('keydown', (e) => {
         if (!currentStory) return;
