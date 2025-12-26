@@ -1,0 +1,13 @@
+{
+  "name": "Story Time - Interactive Book Reader",
+  "description": "A beautiful, modern web application for displaying and reading stories in an interactive book format with page-turning animations",
+  "repository": "https://github.com/hypertonny/It-s-story-time",
+  "logo": "https://raw.githubusercontent.com/hypertonny/It-s-story-time/main/favicon.ico",
+  "keywords": ["node", "express", "stories", "books", "reading", "interactive"],
+  "image": "heroku/nodejs",
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ]
+}

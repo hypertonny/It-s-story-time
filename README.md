@@ -1,24 +1,26 @@
 # 📚 Story Time - Interactive Story Book Website
 
-A beautiful, modern web application for displaying and reading stories in an interactive book format with page-turning animations.
+A beautiful, modern web application for displaying and reading stories in an interactive book format with page-turning animations. Features glassmorphism design, modern color schemes, and seamless Heroku deployment.
 
 ## ✨ Features
 
-- **Modern UI Design**: Gradient backgrounds, smooth animations, and clean card-based layout
+- **Modern UI Design**: Glassmorphism effects, sophisticated color schemes, and smooth animations
 - **Interactive Book Reader**: Click any story to open it in a realistic book format
 - **Page Turning Animation**: Smooth page-turning effects when navigating through stories
 - **Responsive Design**: Works beautifully on desktop, tablet, and mobile devices
 - **Book Thumbnails**: Each story has a unique gradient background with emoji icon
 - **Keyboard Navigation**: Use arrow keys, Page Up/Down, or Escape to navigate
 - **Multiple Stories**: Includes 4 sample stories to get you started
+- **Heroku Ready**: Easy one-click deployment to Heroku
 
 ## 🚀 Getting Started
 
 ### Prerequisites
 
-No build tools or dependencies required! This is a pure HTML/CSS/JavaScript application.
+- Node.js 18.x or higher (for Heroku deployment)
+- Git
 
-### Running the Website
+### Local Development
 
 1. Clone the repository:
    ```bash
@@ -26,17 +28,56 @@ No build tools or dependencies required! This is a pure HTML/CSS/JavaScript appl
    cd It-s-story-time
    ```
 
-2. Serve the files using any web server. For example, with Python:
+2. Install dependencies:
    ```bash
-   python3 -m http.server 8080
-   ```
-   
-   Or with Node.js:
-   ```bash
-   npx http-server -p 8080
+   npm install
    ```
 
-3. Open your browser and navigate to:
+3. Start the development server:
+   ```bash
+   npm start
+   ```
+
+4. Open your browser and navigate to:
+   ```
+   http://localhost:3000
+   ```
+
+### Alternative: Simple HTTP Server
+
+You can also run without Node.js using Python:
+```bash
+python3 -m http.server 8080
+```
+
+## 🌐 Deploy to Heroku
+
+### One-Click Deploy
+
+[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+
+### Manual Deployment
+
+1. Install the [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli)
+
+2. Login to Heroku:
+   ```bash
+   heroku login
+   ```
+
+3. Create a new Heroku app:
+   ```bash
+   heroku create your-app-name
+   ```
+
+4. Deploy to Heroku:
+   ```bash
+   git push heroku main
+   ```
+
+5. Open your deployed app:
+   ```bash
+   heroku open
    ```
    http://localhost:8080
    ```
